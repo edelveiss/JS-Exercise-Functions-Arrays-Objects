@@ -210,7 +210,7 @@ function getCarInfoById(inventory, number) {
 function sortCarInventory(inventory) {
     /* code here */
 
-    let carModelSorted = inventory.sort(function(a, b) {
+    const carModelSorted = inventory.sort(function(a, b) {
         if (a.car_model > b.car_model) return 1;
         else if (a.car_model < b.car_model) return -1;
         else return 0;
@@ -234,7 +234,7 @@ function sortCarInventory(inventory) {
 
 function getModelYears(inventory) {
     /* code here */
-    var carYear = [];
+    const carYear = [];
     for (let i = 0; i < inventory.length; i++) {
         carYear.push(inventory[i].car_year);
     }
@@ -260,7 +260,7 @@ function getModelYears(inventory) {
 function getOlderCars(inventory, maxYear) {
     /* code here */
 
-    var oldCar = [];
+    const oldCar = [];
     for (let i = 0; i < inventory.length; i++) {
         if (inventory[i].car_year <= maxYear) {
             oldCar.push(inventory[i]);
@@ -283,7 +283,7 @@ function getOlderCars(inventory, maxYear) {
 function getGermanCars(inventory) {
     /* code here */
 
-    var germanCars = [];
+    const germanCars = [];
     for (let i = 0; i < inventory.length; i++) {
         if (inventory[i].car_make === "Audi" ||
             inventory[i].car_make === "Mercedes-Benz" ||
